@@ -54,5 +54,58 @@ public class DayCalculatorTest {
 		assertEquals("Fri",DayCalculator.getday(1, 4, 1));	
 	}
 	
+	@Test
+	public void test00020101() {
+		assertEquals("Tue",DayCalculator.getday(2, 1, 1));	
+	}
+	@Test
+	public void test00030101() {
+		assertEquals("Wen",DayCalculator.getday(3, 1, 1));	
+	}
+	@Test
+	public void test00430101() {
+		assertEquals("Thu",DayCalculator.getday(4, 1, 1));	
+	}
+	
+	@Ignore
+	public void test20160407() {
+		assertEquals("Thu",DayCalculator.getday(2016, 4, 7));	
+	}
+	@Test
+	public void testIsLeap1() {
+		assertFalse(DayCalculator.isLeap(1));	
+	}
+	@Test
+	public void testIsLeap2() {
+		assertFalse(DayCalculator.isLeap(2));	
+	}
+	@Test
+	public void testIsLeap3() {
+		assertFalse(DayCalculator.isLeap(3));	
+	}
+	@Test
+	public void testIsLeap4() {
+		assertTrue(DayCalculator.isLeap(4));	
+	}
+	@Test
+	public void testIsLeap5() {
+		assertFalse(DayCalculator.isLeap(5));	
+	}
+	@Test
+	public void testIsLeap8() {
+		assertTrue(DayCalculator.isLeap(8));	
+	}
+	@Test
+	public void testIsLeap100() {
+		assertFalse(DayCalculator.isLeap(100));	
+	}
+	@Test
+	public void testIsLeap200() {
+		assertFalse(DayCalculator.isLeap(200));	
+	}
+	@Test
+	public void testIsLeap400() {
+		assertTrue(DayCalculator.isLeap(400));	
+	}
 	
 }
